@@ -1,0 +1,6 @@
+{
+  "name": "Studio Day Cardoso",
+  "description": "Landing page institucional do Studio Day Cardoso — A Dança que Cura a Alma em Ourinhos-SP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "DM Serif Display", Georgia, Cambria, serif;
+  --font-sans: "Fira Sans", "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Princess Ballet Baby Pink & Rose Gold Palette */
+  --color-ballet-canvas: #FFF5F8;
+  --color-ballet-canvas-subtle: #FDF0F5;
+  --color-ballet-pink-light: #FCE8EF;
+  --color-ballet-pink: #F7C5D5;
+  --color-ballet-pink-vibrant: #E26D8E;
+  --color-ballet-pink-dark: #C43660;
+  
+  --color-rose-gold: #E6A892;
+  --color-rose-gold-dark: #C47D68;
+  --color-tiara-gold: #D49D42;
+  
+  --color-plum-deep: #2A0E1D;
+  --color-plum-rich: #481E34;
+  --color-plum-muted: #7E5369;
+  --color-plum-subtle: #9E748B;
+  
+  --color-text-primary: #2A0E1D;
+  --color-text-muted: #6E4358;
+  --color-text-subtle: #9C6D85;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: #2A0E1D;
+    background-color: #FFF5F8;
+  }
+
+  ::selection {
+    background-color: rgba(226, 109, 142, 0.3);
+    color: #2A0E1D;
+  }
+}
+
+/* Subtle princess fairy/ballet grain background */
+.bg-noise {
+  background-image: radial-gradient(rgba(216, 77, 116, 0.07) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Princess Ballet Glassmorphism Utilities */
+.glass-rose,
+.glass-emerald {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 109, 142, 0.22);
+}
+
+.glass-rose-card,
+.glass-emerald-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(226, 109, 142, 0.28);
+  box-shadow: 0 16px 36px -12px rgba(184, 51, 92, 0.08), 0 0 20px -8px rgba(247, 197, 213, 0.4);
+}
+
+.glass-rose-subtle,
+.glass-emerald-subtle {
+  background: rgba(253, 240, 245, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 109, 142, 0.18);
+}
+
+.glass-pink-pill,
+.glass-gold-pill {
+  background: linear-gradient(135deg, rgba(255, 240, 245, 0.9) 0%, rgba(247, 197, 213, 0.6) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(216, 77, 116, 0.32);
+  color: #B32751;
+}
+
+.glass-rose-modal,
+.glass-emerald-modal {
+  background: rgba(255, 250, 252, 0.98);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(226, 109, 142, 0.35);
+  box-shadow: 0 25px 50px -12px rgba(74, 20, 43, 0.16), 0 0 35px -8px rgba(226, 109, 142, 0.22);
+}
+
+/* Princess Rose & Tiara Gold Gradient Accents */
+.gold-gradient-text,
+.rose-gradient-text {
+  background: linear-gradient(135deg, #B82852 0%, #E26D8E 50%, #D49D42 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg,
+.rose-gradient-bg {
+  background: linear-gradient(135deg, #F08CA7 0%, #E25D82 50%, #C43660 100%);
+  color: #FFFFFF;
+}
+
+.gold-gradient-border {
+  border-image: linear-gradient(to right, #E26D8E, rgba(212, 157, 66, 0.4), #E26D8E) 1;
+}
+
+/* Shadow Lifted Effect */
+.shadow-lifted {
+  box-shadow: 0 16px 36px -12px rgba(184, 51, 92, 0.1), 0 0 22px -6px rgba(247, 197, 213, 0.35);
+}
+
+.shadow-lifted-hover:hover {
+  box-shadow: 0 26px 50px -12px rgba(184, 51, 92, 0.18), 0 0 32px -4px rgba(247, 197, 213, 0.5);
+  transform: translateY(-4px);
+}
+
+.hero-mask {
+  clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
